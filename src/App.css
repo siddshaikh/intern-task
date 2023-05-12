@@ -1,0 +1,62 @@
+.outer-square{
+  position: relative;
+  border: 1px solid black;
+  margin-right: 15em;
+  margin-bottom: 6em;
+  height: 350px;
+  width: 600px;
+}
+.inner-square-container {
+/* position: relative; */
+width: 500px;
+height: 500px;
+/* left: 4em; */
+}
+
+.inner-square {
+position: absolute;
+width: 50px;
+height: 50px;
+background-color: blue;
+}
+
+.button-up {
+position: absolute;
+background-color: aquamarine;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 40em;
+border: none;
+outline: none;
+}
+
+.button-down {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+background-color: aquamarine;
+width: 40em;
+border: none;
+}
+
+.button-left {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: aquamarine;
+height: 25em;
+border: none;
+width: 3em;
+}
+
+.button-right {
+position: absolute;
+top: 50%;
+right: 0;
+height: 24.5em;
+transform: translateY(-50%);
+background-color: aquamarine;
+border: none;
+}
