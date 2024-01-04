@@ -1,0 +1,152 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero-container::after,
+.hero-container::before {
+  content: "";
+  width: 28rem;
+  height: 28rem;
+  border-radius: 28rem;
+  background: #7c66e3;
+  position: absolute;
+  z-index: -1;
+  filter: blur(225px);
+}
+.hero-container::after {
+  top: -3rem;
+  left: -5rem;
+}
+.hero-container::before {
+  bottom: 2rem;
+  right: 0;
+}
+
+.hero-content {
+  flex: 1;
+}
+.hero-content h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  width: 57%;
+  font-size: 1rem;
+  font-family: 400;
+  line-height: 2rem;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.hero-image > div {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.hero-image > div > img {
+  width: 25rem;
+  transition: all 0.3s ease;
+  border-radius: 3rem;
+}
+.tech-icon {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.65rem;
+  border: 1.5px solid #6852ba;
+}
+.tech-icon span {
+  height: auto;
+  transition: all 0.3s ease;
+}
+.hero-image > div > img:hover,
+.tech-icon span:hover {
+  transform: translateY(-0.5rem);
+}
+@media (max-width: 1024px) {
+  .hero-content h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  .hero-image > div > img {
+    width: 20rem;
+  }
+  .tech-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .tech-icon span {
+    size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-image {
+    margin: 2rem 0 2rem 0;
+  }
+  .hero-container h2 {
+    margin-top: 3rem;
+  }
+  .hero-content h2,
+  .hero-content p {
+    width: auto;
+    text-align: center;
+  }
+  .hero-container::after,
+  .hero-container::before {
+    content: "";
+    width: 18rem;
+    height: 18rem;
+  }
+  .hero-container::after {
+    top: 0rem;
+    left: 0rem;
+  }
+  .hero-container::before {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-content h2 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .hero-content p {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+  .hero-image {
+    gap: 1rem;
+  }
+  .hero-image > div {
+    gap: 1rem;
+  }
+  .hero-image > div > img {
+    width: 16rem;
+  }
+  .tech-icon {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+  .tech-icon span {
+    width: 2rem;
+  }
+}

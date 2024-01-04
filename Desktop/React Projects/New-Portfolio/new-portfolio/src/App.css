@@ -1,0 +1,28 @@
+.container {
+  max-width: 1300px !important;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+/* For WebKit based browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #3d3072 0%, #423477 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 linear-gradient(90deg, #3d3072, #423477);
+}
